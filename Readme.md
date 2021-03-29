@@ -1,17 +1,19 @@
-Deep Learning to segment different brain tissues In this project, the main objective is to segment different brain tissues both in Humans (with a 2D approach). 
+Deep Learning to segment different brain tissues
+In this project, the main objective is to segment different brain tissues in Rats (With 2D and 3D DL convolutions approach).
 
-Files Description: The objective of each file is:
+All the images and masks can be found in : download_link
 
-NumpyImage - Pre-processing steps ObjectModel.py - (In some folders this name maybe different). Creates the models architectures
+Files Description
+aux_functions - Auxiliar functions used in processing and evaluation.
 
-ManageFiles.py - Prepares files and turns them in to tensors with the respective labbles ready for DL
+ManageFilesMulti - Prepares files and turns them in to tensors with the respective labels ready for DL
 
-loss_functions.py - Some loss functions created to see some metrics.
+loss_functions - Some loss functions & metrics to use in training.
 
-train.py - It calls other functions. Creates the model of Objectmodel.py, Prepares the files with PrepareFiles.py, and starts training. Compiles, defines epochs, loss functions, optmizers etc. And saves the final and best model of modelcheckpoint.
+train - Trains a model, saving the final and best model using checkpoints.
 
-writegraphs.py - Used to create the tensorboard graphs with validation and training lines in the same graph
+evaluation - Evaluate models created using train
 
-helpingtools.py - Creates a bar tool to download
+aux_functions - Creates a bar tool to download
 
-visualize.py - To save feature maps. Only used in the final after training, otherwise it would take a long time
+models - Models UNET used to train 2D and 3D approachs
